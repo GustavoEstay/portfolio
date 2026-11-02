@@ -21,6 +21,12 @@ const focus = [
   },
 ];
 
+const stats = [
+  { value: "246", label: "merged PRs" },
+  { value: "612", label: "code reviews" },
+  { value: "1,800+", label: "contributions since 2023" },
+];
+
 const experience = [
   {
     when: "2024 to now",
@@ -135,6 +141,22 @@ export default function Home() {
               LinkedIn
             </a>
           </div>
+        </section>
+
+        <section aria-label="Work in numbers" className="border-t border-zinc-800 py-14">
+          <dl className="grid grid-cols-3 gap-6">
+            {stats.map((st) => (
+              <div key={st.label}>
+                <dt className="sr-only">{st.label}</dt>
+                <dd className="text-3xl font-semibold text-white sm:text-5xl">{st.value}</dd>
+                <dd className="mt-2 text-sm text-zinc-400">{st.label}</dd>
+              </div>
+            ))}
+          </dl>
+          <p className="mt-6 text-xs text-zinc-500">
+            In private company repositories at Mercado Libre, so they don&apos;t show on my public
+            GitHub.
+          </p>
         </section>
 
         <section aria-labelledby="focus" className="border-t border-zinc-800 py-20">
